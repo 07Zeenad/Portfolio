@@ -1,0 +1,5 @@
+.contact h2 { font-size: 2rem; color: #0d1117; margin-bottom: 20px; }
+.contact-form { display: flex; flex-direction: column; gap: 15px; max-width: 500px; }
+.contact-form input, .contact-form select, .contact-form textarea { padding: 10px; border-radius: 5px; border: 1px solid #ccc; }
+.contact-form button { background-color: #00bfff; color: white; padding: 10px; border-radius: 5px; cursor: pointer; border: none; transition: 0.3s; }
+.contact-form button:hover { background-color: #0080c0; }

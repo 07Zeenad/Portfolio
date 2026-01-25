@@ -1,0 +1,6 @@
+.education h2 { font-size: 2rem; color: #0d1117; margin-bottom: 20px; }
+.timeline { display: flex; flex-direction: column; gap: 15px; }
+.timeline-item { display: flex; gap: 20px; align-items: center; background-color: #f5f5f5; padding: 15px; border-radius: 10px; }
+.timeline-year { font-weight: bold; color: #00bfff; min-width: 100px; }
+.timeline-content h3 { margin: 0; color: #0d1117; }
+.timeline-content p { margin: 0; color: #333; }
