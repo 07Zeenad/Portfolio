@@ -1,25 +1,49 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Header.css";
 
-function Header() {
+export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggleMenu = () => setIsOpen(!isOpen);
+  const closeMenu = () => setIsOpen(false);
 
   return (
     <header className="header">
       <div className="container header-container">
-        <h2 className="logo">Zeenad Fareed</h2>
+        <h2 className="logo">Muhammad Zeenad Fareed</h2>
 
         <nav className={isOpen ? "nav open" : "nav"}>
           <ul className="nav-links">
-            <li><Link to="/" onClick={() => setIsOpen(false)}>Home</Link></li>
-            <li><Link to="/about" onClick={() => setIsOpen(false)}>About</Link></li>
-            <li><Link to="/skills" onClick={() => setIsOpen(false)}>Skills</Link></li>
-            <li><Link to="/projects" onClick={() => setIsOpen(false)}>Projects</Link></li>
-            <li><Link to="/education" onClick={() => setIsOpen(false)}>Education</Link></li>
-            <li><Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link></li>
+            <li>
+              <NavLink to="/" end onClick={closeMenu}>
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/about" onClick={closeMenu}>
+                About
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/skills" onClick={closeMenu}>
+                Skills
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/projects" onClick={closeMenu}>
+                Projects
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/education" onClick={closeMenu}>
+                Education
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/contact" onClick={closeMenu}>
+                Contact
+              </NavLink>
+            </li>
           </ul>
         </nav>
 
@@ -32,5 +56,3 @@ function Header() {
     </header>
   );
 }
-
-export default Header;
